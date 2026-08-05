@@ -13,22 +13,23 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    private Long ID;
     private String name;
     private String email;
     private String phone;
     private String password;
 
-    public User () {
-
-    }
-
-    public User(long ID, String name, String email, String phone, String password) {
+    public User(Long ID, String name, String email, String phone, String password) {
+        super();
         this.ID = ID;
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.password = password;
+    }
+
+    public User() {
+
     }
 
     public long getID() {
